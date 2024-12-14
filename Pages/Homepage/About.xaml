@@ -13,7 +13,7 @@
                    VerticalOptions="Center" />
 
             <!-- Body Text -->
-            <Label Text="We are a team of three students from the Information Technology program at UGM: Melvino, Irsad, and Yosa. This app was created as part of our final project for the Object-Oriented Programming (OOP) course. Our goal was to develop a user-friendly platform for movie enthusiasts to rate and share their thoughts on the films they watch."
+            <Label Text="We are a team of three students from the Information Technology program at UGM: Melvino Rizky Putra Wahyudi, Irsad Najib Eka Putra, and Taufiqurrahman. This app was created as part of our final project for the Object-Oriented Programming (OOP) course. Our goal was to develop a user-friendly platform for movie enthusiasts to rate and share their thoughts on the films they watch."
                    FontSize="16"
                    HorizontalTextAlignment="Center"
                    LineBreakMode="WordWrap"

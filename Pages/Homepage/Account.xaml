@@ -2,7 +2,8 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="RateReel.Pages.Homepage.Account"
-             BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
+             BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}"
+              Title="Account">
 
     <ScrollView>
         <VerticalStackLayout Spacing="20" Padding="20">
@@ -31,6 +32,7 @@
                            FontAttributes="Bold"
                            HorizontalOptions="Center"
                            TextColor="{AppThemeBinding Light={StaticResource LightTextColor}, Dark={StaticResource DarkTextColor}}"/>
+                    <!-- Ensure Username is displayed -->
 
                     <!-- Stats with Bindings -->
                     <Grid ColumnDefinitions="*,*" 
@@ -71,13 +73,14 @@
                    HasShadow="False"
                    Padding="20">
                 <VerticalStackLayout Spacing="15">
-                    <!-- Edit Profile Button with Click Handler -->
+                    <!-- Edit Profile Button with Click Handler
                     <Button Text="Edit Profile"
                             BackgroundColor="Transparent"
                             TextColor="{AppThemeBinding Light={StaticResource LightTextColor}, Dark={StaticResource DarkTextColor}}"
                             HorizontalOptions="Start"
                             Padding="0"
                             Clicked="OnEditProfileClicked"/>
+                             -->
                     
                     <!-- Back to Home -->
                     <Button Text="Back to Home"
@@ -99,4 +102,3 @@
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
-			

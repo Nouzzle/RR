@@ -1,13 +1,18 @@
 using Microsoft.Maui.Controls;
 using System;
+using RateReel.Models;
+using RateReel.Services;
 
 namespace RateReel.Pages.Authentication
 {
     public partial class RegisterPage : ContentPage
     {
+        private readonly MongoDbService _mongoDbService;
+
         public RegisterPage()
         {
             InitializeComponent();
+            _mongoDbService = new MongoDbService();
         }
 
         private async void OnRegisterClicked(object sender, EventArgs e)
@@ -23,7 +28,14 @@ namespace RateReel.Pages.Authentication
                     return;
                 }
 
-                // Simple registration logic - replace with actual registration
+                var user = new User
+                {
+                    Username = username,
+                    Password = password
+                };
+
+                // Save the new user to MongoDB
+                await _mongoDbService.SaveUserAsync(user);
                 await DisplayAlert("Success", "Registration successful!", "OK");
                 await Shell.Current.GoToAsync("//Login");
             }

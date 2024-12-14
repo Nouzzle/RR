@@ -3,6 +3,7 @@ using RateReel.Models;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
+using RateReel.Services;
 
 namespace RateReel.Pages.Authentication
 {
@@ -37,24 +38,26 @@ namespace RateReel.Pages.Authentication
         }
 
         public List<SlideModel> Slides { get; set; }
+        private readonly MongoDbService _mongoDbService;
 
         public LoginPage()
         {
             InitializeComponent();
+            _mongoDbService = new MongoDbService();
 
             // Initialize Slides with three unique slides
             Slides = new List<SlideModel>
             {
-               new SlideModel
-{
-    Type = SlideType.Intro,
-    Message = "Discover a world of movies! Get honest reviews before making your next watch choice."
-},
-new SlideModel
-{
-    Type = SlideType.Intro,
-    Message = "Join the community! Swipe left to sign up and start sharing your reviews."
-},
+                new SlideModel
+                {
+                    Type = SlideType.Intro,
+                    Message = "Discover a world of movies! Get honest reviews before making your next watch choice."
+                },
+                new SlideModel
+                {
+                    Type = SlideType.Intro,
+                    Message = "Join the community! Swipe left to sign up and start sharing your reviews."
+                },
                 new SlideModel
                 {
                     Type = SlideType.Login
@@ -65,7 +68,6 @@ new SlideModel
             BindingContext = this;
         }
 
-        // Handle CarouselView PositionChanged event
         private void CarouselView_PositionChanged(object sender, PositionChangedEventArgs e)
         {
             int lastIndex = Slides.Count - 1;
@@ -73,11 +75,10 @@ new SlideModel
             if (e.CurrentPosition == lastIndex)
             {
                 // Optional: Notify the user they've reached the last slide
-                // Example: Display a toast or enable a "Get Started" button
             }
         }
 
-        // Event handlers for login and registration
+        // Event handlers for login
         private async void OnLoginClicked(object sender, EventArgs e)
         {
             try
@@ -94,9 +95,14 @@ new SlideModel
                     return;
                 }
 
-                // Replace with actual authentication logic
-                if (username.ToLower() == "user" && password == "password")
+                // Authenticate with MongoDB
+                var user = await _mongoDbService.GetUserAsync(username);
+                if (user != null && user.Password == password)
                 {
+                    // Set the LoggedInUsername
+                    App.LoggedInUsername = username;
+                    System.Diagnostics.Debug.WriteLine($"LoggedInUsername set to: {App.LoggedInUsername}");
+
                     // Enable Flyout and navigation bars after successful login
                     Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
                     Shell.SetNavBarIsVisible(Shell.Current, true);
@@ -123,7 +129,6 @@ new SlideModel
             await Shell.Current.GoToAsync("Register");
         }
 
-        // INotifyPropertyChanged implementation
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = null)

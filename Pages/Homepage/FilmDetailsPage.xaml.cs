@@ -1,6 +1,7 @@
 using Microsoft.Maui.Controls;
 using RateReel.Models;
 using System;
+using System.Linq;
 
 namespace RateReel.Pages.Homepage
 {
@@ -35,19 +36,44 @@ namespace RateReel.Pages.Homepage
                 return;
             }
 
-            var newReview = new Review
+            if (string.IsNullOrEmpty(App.LoggedInUsername))
             {
-                Username = "User", // Replace with actual user logic
-                MovieTitle = CurrentFilm.Title,
-                Rating = rating,
-                ReviewText = reviewText,
-                PosterUrl = CurrentFilm.PosterUrl
-            };
+                await DisplayAlert("Error", "You must be logged in to submit a review.", "OK");
+                return;
+            }
 
-            // Add the new review to the global Reviews collection
-            App.Reviews.Add(newReview);
+            var existingReview = App.Reviews.FirstOrDefault(r => r.Username == App.LoggedInUsername && r.MovieTitle == CurrentFilm.Title);
 
-            await DisplayAlert("Success", "Your review has been submitted.", "OK");
+            if (existingReview != null)
+            {
+                // Update the existing review
+                existingReview.Rating = rating;
+                existingReview.ReviewText = reviewText;
+                existingReview.PosterUrl = CurrentFilm.PosterUrl;
+                existingReview.ReviewDate = DateTime.Now;
+
+                await DisplayAlert("Success", "Your review has been updated.", "OK");
+            }
+            else
+            {
+                // Add a new review
+                var newReview = new Review
+                {
+                    Username = App.LoggedInUsername,
+                    MovieTitle = CurrentFilm.Title,
+                    Rating = rating,
+                    ReviewText = reviewText,
+                    PosterUrl = CurrentFilm.PosterUrl,
+                    ReviewDate = DateTime.Now
+                };
+
+                App.Reviews.Add(newReview);
+
+                await DisplayAlert("Success", "Your review has been submitted.", "OK");
+            }
+
+            // Notify the Account page to update counts
+            MessagingCenter.Send(this, "UpdateCounts");
 
             // Clear input fields
             RatingSlider.Value = 3;

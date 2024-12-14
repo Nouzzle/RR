@@ -64,6 +64,8 @@
 		<MauiImage Include="Resources\Images\mov3.jpg" BaseSize="300,185" />
 		<MauiImage Include="Resources\Images\mov4.jpg" BaseSize="300,185" />
 		<MauiImage Include="Resources\Images\mov5.jpg" BaseSize="300,185" />
+		<MauiImage Include="Resources\Images\default_avatar.png" BaseSize="300,185" />
+
 
 
 		<!-- Custom Fonts -->
@@ -79,6 +81,7 @@
 		<PackageReference Include="Microsoft.Maui.Controls" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Maui.Controls.Compatibility" Version="$(MauiVersion)" />
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
+		<PackageReference Include="MongoDB.Driver" Version="3.1.0" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
 	</ItemGroup>
 	

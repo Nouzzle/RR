@@ -5,7 +5,7 @@ AreAnyAssembliesTrimmed=false
 				AOTOutputDirectory=obj/Debug/net8.0-ios/iossimulator-x64/nativelibraries/aot-output/
 				DedupAssembly=
 				AppBundleManifestPath=bin/Debug/net8.0-ios/iossimulator-x64/RateReel.app/Info.plist
-				CacheDirectory=/Users/vinn/Desktop/RateReel copy 10/obj/Debug/net8.0-ios/iossimulator-x64/linker-cache
+				CacheDirectory=/Users/vinn/Desktop/RateReel copy/obj/Debug/net8.0-ios/iossimulator-x64/linker-cache
 				
 				Debug=true
 				DeploymentTarget=11.0
@@ -184,7 +184,7 @@ FrameworkAssembly=System.Private.CoreLib
 				IntermediateLinkDir=obj/Debug/net8.0-ios/iossimulator-x64/linked/
 				InvariantGlobalization=false
 				HybridGlobalization=false
-				ItemsDirectory=/Users/vinn/Desktop/RateReel copy 10/obj/Debug/net8.0-ios/iossimulator-x64/linker-items
+				ItemsDirectory=/Users/vinn/Desktop/RateReel copy/obj/Debug/net8.0-ios/iossimulator-x64/linker-items
 				IsAppExtension=false
 				IsSimulatorBuild=True
 				LibMonoLinkMode=dylib

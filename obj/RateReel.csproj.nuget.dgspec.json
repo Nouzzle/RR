@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "/Users/vinn/Desktop/RateReel FIXED/RateReel.csproj": {}
+    "/Users/vinn/Desktop/RateReel copy/RateReel.csproj": {}
   },
   "projects": {
-    "/Users/vinn/Desktop/RateReel FIXED/RateReel.csproj": {
+    "/Users/vinn/Desktop/RateReel copy/RateReel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/vinn/Desktop/RateReel FIXED/RateReel.csproj",
+        "projectUniqueName": "/Users/vinn/Desktop/RateReel copy/RateReel.csproj",
         "projectName": "RateReel",
-        "projectPath": "/Users/vinn/Desktop/RateReel FIXED/RateReel.csproj",
+        "projectPath": "/Users/vinn/Desktop/RateReel copy/RateReel.csproj",
         "packagesPath": "/Users/vinn/.nuget/packages/",
-        "outputPath": "/Users/vinn/Desktop/RateReel FIXED/obj/",
+        "outputPath": "/Users/vinn/Desktop/RateReel copy/obj/",
         "projectStyle": "PackageReference",
         "crossTargeting": true,
         "configFilePaths": [
@@ -81,6 +81,10 @@
               "target": "Package",
               "version": "[8.0.11, )",
               "autoReferenced": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -167,6 +171,10 @@
               "version": "[8.0.11, )",
               "autoReferenced": true
             },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.1.0, )"
+            },
             "Newtonsoft.Json": {
               "target": "Package",
               "version": "[13.0.3, )"
@@ -239,6 +247,10 @@
               "target": "Package",
               "version": "[8.0.11, )",
               "autoReferenced": true
+            },
+            "MongoDB.Driver": {
+              "target": "Package",
+              "version": "[3.1.0, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",

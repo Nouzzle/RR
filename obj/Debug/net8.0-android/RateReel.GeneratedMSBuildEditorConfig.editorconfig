@@ -12,91 +12,97 @@ build_property.PlatformNeutralAssembly =
 build_property.EnforceExtendedAnalyzerRules = 
 build_property._SupportedPlatformList = Linux,macOS,Windows
 build_property.RootNamespace = RateReel
-build_property.ProjectDir = /Users/vinn/Desktop/RateReel FIXED/
+build_property.ProjectDir = /Users/vinn/Desktop/RateReel copy/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = 
 build_property.EffectiveAnalysisLevelStyle = 8.0
 build_property.EnableCodeStyleSeverity = 
 
-[/Users/vinn/Desktop/RateReel FIXED/App.xaml]
+[/Users/vinn/Desktop/RateReel copy/App.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.App.xaml
 build_metadata.AdditionalFiles.TargetPath = App.xaml
 build_metadata.AdditionalFiles.RelativePath = App.xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/AppShell.xaml]
+[/Users/vinn/Desktop/RateReel copy/AppShell.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.AppShell.xaml
 build_metadata.AdditionalFiles.TargetPath = AppShell.xaml
 build_metadata.AdditionalFiles.RelativePath = AppShell.xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/MainPage.xaml]
+[/Users/vinn/Desktop/RateReel copy/MainPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.MainPage.xaml
 build_metadata.AdditionalFiles.TargetPath = MainPage.xaml
 build_metadata.AdditionalFiles.RelativePath = MainPage.xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/Pages/Authentication/LoginPage.xaml]
+[/Users/vinn/Desktop/RateReel copy/Pages/Authentication/LoginPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Authentication.LoginPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Authentication/LoginPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Authentication/LoginPage.xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/Pages/Authentication/RegisterPage.xaml]
+[/Users/vinn/Desktop/RateReel copy/Pages/Authentication/RegisterPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Authentication.RegisterPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Authentication/RegisterPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Authentication/RegisterPage.xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/Pages/Homepage/About.xaml]
+[/Users/vinn/Desktop/RateReel copy/Pages/Homepage/About.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Homepage.About.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Homepage/About.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Homepage/About.xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/Pages/Homepage/Account.xaml]
+[/Users/vinn/Desktop/RateReel copy/Pages/Homepage/Account.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Homepage.Account.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Homepage/Account.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Homepage/Account.xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/Pages/Homepage/FilmDetailsPage.xaml]
+[/Users/vinn/Desktop/RateReel copy/Pages/Homepage/EditProfilePage.xaml]
+build_metadata.AdditionalFiles.GenKind = Xaml
+build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Homepage.EditProfilePage.xaml
+build_metadata.AdditionalFiles.TargetPath = Pages/Homepage/EditProfilePage.xaml
+build_metadata.AdditionalFiles.RelativePath = Pages/Homepage/EditProfilePage.xaml
+
+[/Users/vinn/Desktop/RateReel copy/Pages/Homepage/FilmDetailsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Homepage.FilmDetailsPage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Homepage/FilmDetailsPage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Homepage/FilmDetailsPage.xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/Pages/Homepage/Films.xaml]
+[/Users/vinn/Desktop/RateReel copy/Pages/Homepage/Films.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Homepage.Films.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Homepage/Films.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Homepage/Films.xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/Pages/Homepage/Homepage.xaml]
+[/Users/vinn/Desktop/RateReel copy/Pages/Homepage/Homepage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Homepage.Homepage.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Homepage/Homepage.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Homepage/Homepage.xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/Pages/Homepage/Settings.Xaml]
+[/Users/vinn/Desktop/RateReel copy/Pages/Homepage/Settings.Xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Homepage.Settings.Xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Homepage/Settings.Xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Homepage/Settings.Xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/Pages/Homepage/Timeline.xaml]
+[/Users/vinn/Desktop/RateReel copy/Pages/Homepage/Timeline.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Homepage.Timeline.xaml
 build_metadata.AdditionalFiles.TargetPath = Pages/Homepage/Timeline.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Homepage/Timeline.xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/Resources/Styles/Colors.xaml]
+[/Users/vinn/Desktop/RateReel copy/Resources/Styles/Colors.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Resources.Styles.Colors.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Colors.xaml
 build_metadata.AdditionalFiles.RelativePath = Resources/Styles/Colors.xaml
 
-[/Users/vinn/Desktop/RateReel FIXED/Resources/Styles/Styles.xaml]
+[/Users/vinn/Desktop/RateReel copy/Resources/Styles/Styles.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Resources.Styles.Styles.xaml
 build_metadata.AdditionalFiles.TargetPath = Resources/Styles/Styles.xaml
