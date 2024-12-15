@@ -1,4 +1,3 @@
-// SlideModel.cs
 namespace RateReel.Models
 {
     public enum SlideType

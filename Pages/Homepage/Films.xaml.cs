@@ -1,4 +1,3 @@
-// Films.xaml.cs
 using System;
 using System.Collections.ObjectModel;
 using Microsoft.Maui.Controls;
@@ -25,7 +24,7 @@ namespace RateReel.Pages.Homepage
             AllMovies = new ObservableCollection<Film>();
             FilteredMovies = new ObservableCollection<Film>();
 
-            // Retrieve TmdbService from the service provider
+            // Retrieve TmdbService 
             _tmdbService = App.ServiceProvider.GetService<TmdbService>();
 
             BindingContext = this;
@@ -46,7 +45,7 @@ namespace RateReel.Pages.Homepage
                     AllMovies.Add(film);
                 }
 
-                // Initialize FilteredMovies with all films
+                
                 FilteredMovies.Clear();
                 foreach (var film in AllMovies)
                 {
@@ -60,8 +59,7 @@ namespace RateReel.Pages.Homepage
             }
         }
 
-        // **Add this event handler**
-        private async void OnSearchBarTextChanged(object sender, TextChangedEventArgs e)
+                private async void OnSearchBarTextChanged(object sender, TextChangedEventArgs e)
         {
             var searchText = e.NewTextValue?.ToLower() ?? "";
             FilteredMovies.Clear();
@@ -96,7 +94,7 @@ namespace RateReel.Pages.Homepage
             if (e.CurrentSelection.FirstOrDefault() is Film selectedFilm)
             {
                 await Navigation.PushAsync(new FilmDetailsPage(selectedFilm));
-                // Deselect the item
+                
                 ((CollectionView)sender).SelectedItem = null;
             }
         }

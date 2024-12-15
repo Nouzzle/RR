@@ -1,15 +1,12 @@
-namespace RateReel.Models
+using MongoDB.Bson;
+using MongoDB.Bson.Serialization.Attributes;
+
+public class User
 {
-    public class User
-    {
-        // MongoDB will automatically generate an _id for this field if it's not provided
-        public string Id { get; set; } 
+    [BsonId]
+    [BsonRepresentation(BsonType.ObjectId)] // MongoDB to generate _id
+    public string Id { get; set; } = ObjectId.GenerateNewId().ToString(); 
 
-        public string Username { get; set; }
-        
-        // Add Password property to store user password
-        public string Password { get; set; }
-
-        public string ProfilePicture { get; set; } 
-    }
+    public string Username { get; set; }
+    public string Password { get; set; }
 }

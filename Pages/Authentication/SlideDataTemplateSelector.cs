@@ -1,4 +1,3 @@
-// SlideDataTemplateSelector.cs
 using Microsoft.Maui.Controls;
 using RateReel.Models;
 
@@ -6,7 +5,7 @@ namespace RateReel.Selectors
 {
     public class SlideDataTemplateSelector : DataTemplateSelector
     {
-        // Make the DataTemplates nullable since they'll be set via XAML
+        
         public DataTemplate? IntroTemplate { get; set; }
         public DataTemplate? InvitationTemplate { get; set; }
         public DataTemplate? LoginTemplate { get; set; }

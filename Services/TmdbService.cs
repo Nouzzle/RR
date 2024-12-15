@@ -10,7 +10,7 @@ namespace RateReel.Services
     public class TmdbService
     {
         private readonly HttpClient _httpClient;
-        private const string ApiKey = "057f705441ffc6217091e135060edf27"; // Replace with your TMDB API key
+        private const string ApiKey = "057f705441ffc6217091e135060edf27"; //  TMDB API key
         private const string BaseUrl = "https://api.themoviedb.org/3/";
 
         public TmdbService(HttpClient httpClient)

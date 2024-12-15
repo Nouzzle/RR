@@ -72,10 +72,10 @@ namespace RateReel.Pages.Homepage
                 await DisplayAlert("Success", "Your review has been submitted.", "OK");
             }
 
-            // Notify the Account page to update counts
+            // Account page to update counts
             MessagingCenter.Send(this, "UpdateCounts");
 
-            // Clear input fields
+
             RatingSlider.Value = 3;
             ReviewEditor.Text = string.Empty;
         }

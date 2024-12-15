@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using RateReel.Services;
+using System;
 
 namespace RateReel.Pages.Authentication
 {
@@ -45,7 +46,6 @@ namespace RateReel.Pages.Authentication
             InitializeComponent();
             _mongoDbService = new MongoDbService();
 
-            // Initialize Slides with three unique slides
             Slides = new List<SlideModel>
             {
                 new SlideModel
@@ -61,7 +61,6 @@ namespace RateReel.Pages.Authentication
                 new SlideModel
                 {
                     Type = SlideType.Login
-                    // Message is optional; no need to set it
                 }
             };
 
@@ -70,24 +69,14 @@ namespace RateReel.Pages.Authentication
 
         private void CarouselView_PositionChanged(object sender, PositionChangedEventArgs e)
         {
-            int lastIndex = Slides.Count - 1;
-
-            if (e.CurrentPosition == lastIndex)
-            {
-                // Optional: Notify the user they've reached the last slide
-            }
         }
 
-        // Event handlers for login
         private async void OnLoginClicked(object sender, EventArgs e)
         {
             try
             {
-                string username = Username;
-                string password = Password;
-
-                // Debugging Statement
-                System.Diagnostics.Debug.WriteLine($"Attempting login with Username: {username}, Password: {password}");
+                string username = Username?.Trim();
+                string password = Password?.Trim();
 
                 if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
                 {
@@ -99,9 +88,8 @@ namespace RateReel.Pages.Authentication
                 var user = await _mongoDbService.GetUserAsync(username);
                 if (user != null && user.Password == password)
                 {
-                    // Set the LoggedInUsername
+                    
                     App.LoggedInUsername = username;
-                    System.Diagnostics.Debug.WriteLine($"LoggedInUsername set to: {App.LoggedInUsername}");
 
                     // Enable Flyout and navigation bars after successful login
                     Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;

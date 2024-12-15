@@ -1657,3 +1657,9 @@
 /Users/vinn/Desktop/RateReel copy/obj/Debug/net8.0-ios/iossimulator-x64/RateReel.csproj.Up2Date
 /Users/vinn/Desktop/RateReel copy/obj/Debug/net8.0-ios/iossimulator-x64/RateReel.genruntimeconfig.cache
 /Users/vinn/Desktop/RateReel copy/obj/Debug/net8.0-ios/iossimulator-x64/ref/RateReel.dll
+/Users/vinn/Desktop/RateReel copy/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/DnsClient.stamp
+/Users/vinn/Desktop/RateReel copy/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/MongoDB.Bson.stamp
+/Users/vinn/Desktop/RateReel copy/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/MongoDB.Driver.stamp
+/Users/vinn/Desktop/RateReel copy/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/SharpCompress.stamp
+/Users/vinn/Desktop/RateReel copy/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/Snappier.stamp
+/Users/vinn/Desktop/RateReel copy/obj/Debug/net8.0-ios/iossimulator-x64/resourcestamps/ZstdSharp.stamp

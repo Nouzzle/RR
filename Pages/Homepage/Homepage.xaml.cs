@@ -4,9 +4,9 @@ using System.Collections.Specialized;
 using System.Diagnostics;
 using System.Linq;
 using Microsoft.Maui.Controls;
-using Microsoft.Maui.Dispatching; // For MainThread
+using Microsoft.Maui.Dispatching; 
 using RateReel.Models;
-using RateReel.Services; // Ensure this namespace is correct
+using RateReel.Services; 
 using Microsoft.Extensions.DependencyInjection;
 
 namespace RateReel.Pages.Homepage
@@ -32,13 +32,13 @@ namespace RateReel.Pages.Homepage
             RecentReviews = new ObservableCollection<Review>();
             App.Reviews.CollectionChanged += Reviews_CollectionChanged;
             LoadRecentReviews();
-            // Retrieve TmdbService from the service provider
+            // Retrieve TmdbService API
             _tmdbService = App.ServiceProvider.GetService<TmdbService>();
 
             BindingContext = this;
             FilmsCollectionView.ItemsSource = FilteredMovies;
 
-            // Fetch films on initialization
+          
             FetchFilmsAsync();
         }
 
@@ -46,7 +46,7 @@ namespace RateReel.Pages.Homepage
         {
             try
             {
-                // Ensure operations are on the main thread
+                
                 MainThread.BeginInvokeOnMainThread(() =>
                 {
                     var recent = App.Reviews
@@ -72,8 +72,7 @@ namespace RateReel.Pages.Homepage
             catch (Exception ex)
             {
                 Debug.WriteLine($"Error in LoadRecentReviews: {ex.Message}");
-                // Optionally, display an alert to the user
-                // DisplayAlert("Error", "Failed to load recent reviews.", "OK");
+                
             }
         }
 
@@ -125,7 +124,7 @@ namespace RateReel.Pages.Homepage
             if (e.CurrentSelection.FirstOrDefault() is Film selectedFilm)
             {
                 await Navigation.PushAsync(new FilmDetailsPage(selectedFilm));
-                // Deselect the item
+                
                 ((CollectionView)sender).SelectedItem = null;
             }
         }

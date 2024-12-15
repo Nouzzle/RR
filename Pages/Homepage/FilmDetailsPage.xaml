@@ -6,7 +6,7 @@
              Title="Film Details">
     <ScrollView>
         <VerticalStackLayout Padding="20" Spacing="15"  BackgroundColor="{AppThemeBinding Light={StaticResource LightBackground}, Dark={StaticResource DarkBackground}}">
-            <!-- Existing Film Details -->
+
             <Image x:Name="PosterImage"
                    HeightRequest="650"
                    WidthRequest="650" 

@@ -60,12 +60,6 @@ build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Homepage.Ac
 build_metadata.AdditionalFiles.TargetPath = Pages/Homepage/Account.xaml
 build_metadata.AdditionalFiles.RelativePath = Pages/Homepage/Account.xaml
 
-[/Users/vinn/Desktop/RateReel copy/Pages/Homepage/EditProfilePage.xaml]
-build_metadata.AdditionalFiles.GenKind = Xaml
-build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Homepage.EditProfilePage.xaml
-build_metadata.AdditionalFiles.TargetPath = Pages/Homepage/EditProfilePage.xaml
-build_metadata.AdditionalFiles.RelativePath = Pages/Homepage/EditProfilePage.xaml
-
 [/Users/vinn/Desktop/RateReel copy/Pages/Homepage/FilmDetailsPage.xaml]
 build_metadata.AdditionalFiles.GenKind = Xaml
 build_metadata.AdditionalFiles.ManifestResourceName = RateReel.Pages.Homepage.FilmDetailsPage.xaml

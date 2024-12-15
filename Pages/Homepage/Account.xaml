@@ -32,9 +32,9 @@
                            FontAttributes="Bold"
                            HorizontalOptions="Center"
                            TextColor="{AppThemeBinding Light={StaticResource LightTextColor}, Dark={StaticResource DarkTextColor}}"/>
-                    <!-- Ensure Username is displayed -->
+           
 
-                    <!-- Stats with Bindings -->
+                   
                     <Grid ColumnDefinitions="*,*" 
                           ColumnSpacing="20"
                           Margin="0,10">
@@ -90,7 +90,7 @@
                             Padding="0"
                             Clicked="OnBackToHomeClicked"/>
 
-                    <!-- Sign Out with Click Handler -->
+                    <!-- Sign Out  -->
                     <Button Text="Sign Out"
                             BackgroundColor="Transparent"
                             TextColor="{StaticResource AccentColor}"

@@ -26,7 +26,7 @@
 <Color x:Key="PlaceholderTextLight">#8E8E93</Color>
 <Color x:Key="SubtleGray">#E5E7EB</Color>
 
-<!-- Updated Accent Color to Grey -->
+
 <Color x:Key="AccentColor">#757575</Color> <!-- Clean neutral grey -->
          
 

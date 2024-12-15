@@ -39,7 +39,7 @@ namespace RateReel
             {
                 System.Diagnostics.Debug.WriteLine("Registering routes...");
                 
-                // Use consistent route format without triple slashes
+                // Use consistent route format
                 Routing.RegisterRoute("Login", typeof(Pages.Authentication.LoginPage));
                 Routing.RegisterRoute("Register", typeof(Pages.Authentication.RegisterPage));
                 Routing.RegisterRoute("Home", typeof(Pages.Homepage.Homepage));

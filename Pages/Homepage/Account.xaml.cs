@@ -59,7 +59,6 @@ namespace RateReel.Pages.Homepage
     Username = App.LoggedInUsername;
     System.Diagnostics.Debug.WriteLine($"Account Page: Username set to {Username}");
 
-    // Subscribe to the message
     MessagingCenter.Subscribe<FilmDetailsPage>(this, "UpdateCounts", (sender) => {
         UpdateCounts();
     });
@@ -77,10 +76,7 @@ namespace RateReel.Pages.Homepage
             System.Diagnostics.Debug.WriteLine($"Account Page: ReviewCount={ReviewCount}, FilmsCount={FilmsCount}");
         }
 
-        private async void OnEditProfileClicked(object sender, EventArgs e)
-        {
-            await DisplayAlert("Edit Profile", "Edit Profile functionality coming soon", "OK");
-        }
+      
 
         private async void OnBackToHomeClicked(object sender, EventArgs e)
         {
@@ -109,7 +105,7 @@ namespace RateReel.Pages.Homepage
                     Shell.SetNavBarIsVisible(Shell.Current, false);
                     Shell.SetTabBarIsVisible(Shell.Current, false);
 
-                    App.LoggedInUsername = string.Empty; // Clear the logged-in user
+                    App.LoggedInUsername = string.Empty; 
                     System.Diagnostics.Debug.WriteLine("LoggedInUsername cleared.");
 
                     await Shell.Current.GoToAsync("//Login");

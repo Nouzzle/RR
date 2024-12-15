@@ -5,7 +5,7 @@
              x:Class="RateReel.Pages.Homepage.Homepage"
              Title="Homepage">
 
-    <!-- Use a Grid layout to allow the CollectionView to expand and scroll -->
+    
     <Grid RowDefinitions="Auto,*,Auto">
 
         <!-- Search Bar -->
@@ -52,7 +52,7 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
 
-            <!-- Adjust the ItemsLayout -->
+          
             <CollectionView.ItemsLayout>
                 <LinearItemsLayout Orientation="Vertical"/>
             </CollectionView.ItemsLayout>

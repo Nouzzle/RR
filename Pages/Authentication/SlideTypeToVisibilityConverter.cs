@@ -1,8 +1,7 @@
-// SlideTypeToVisibilityConverter.cs
 using System;
 using System.Globalization;
 using Microsoft.Maui.Controls;
-using RateReel.Models; // Ensure this namespace is included
+using RateReel.Models; 
 
 namespace RateReel.Converters
 {

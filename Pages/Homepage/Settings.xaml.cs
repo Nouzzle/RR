@@ -34,7 +34,7 @@ namespace RateReel.Pages.Homepage
             {
                 System.Diagnostics.Debug.WriteLine("Attempting navigation to Home...");
                 
-                // Navigate to Home using absolute path
+                // Navigate to Home 
                 if (Shell.Current != null)
                 {
                     await Shell.Current.GoToAsync($"///Home");

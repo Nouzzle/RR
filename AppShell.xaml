@@ -72,7 +72,7 @@
         <ShellContent ContentTemplate="{DataTemplate pages:Account}" Route="Account"/>
     </FlyoutItem>
 
-     <!-- Register EditProfilePage -->
-    <ShellContent Route="EditProfilePage" ContentTemplate="{DataTemplate pages:EditProfilePage}" />
+    
+   
    
 </Shell>

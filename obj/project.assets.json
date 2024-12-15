@@ -32725,6 +32725,7 @@
       "Microsoft.Maui.Controls >= 8.0.83",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.83",
       "Microsoft.NET.ILLink.Tasks >= 8.0.11",
+      "MongoDB.Bson >= 3.1.0",
       "MongoDB.Driver >= 3.1.0",
       "Newtonsoft.Json >= 13.0.3"
     ],
@@ -32735,6 +32736,7 @@
       "Microsoft.Maui.Controls >= 8.0.83",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.83",
       "Microsoft.NET.ILLink.Tasks >= 8.0.11",
+      "MongoDB.Bson >= 3.1.0",
       "MongoDB.Driver >= 3.1.0",
       "Newtonsoft.Json >= 13.0.3"
     ],
@@ -32745,6 +32747,7 @@
       "Microsoft.Maui.Controls >= 8.0.83",
       "Microsoft.Maui.Controls.Compatibility >= 8.0.83",
       "Microsoft.NET.ILLink.Tasks >= 8.0.11",
+      "MongoDB.Bson >= 3.1.0",
       "MongoDB.Driver >= 3.1.0",
       "Newtonsoft.Json >= 13.0.3"
     ]
@@ -32829,6 +32832,10 @@
             "target": "Package",
             "version": "[8.0.11, )",
             "autoReferenced": true
+          },
+          "MongoDB.Bson": {
+            "target": "Package",
+            "version": "[3.1.0, )"
           },
           "MongoDB.Driver": {
             "target": "Package",
@@ -32919,6 +32926,10 @@
             "version": "[8.0.11, )",
             "autoReferenced": true
           },
+          "MongoDB.Bson": {
+            "target": "Package",
+            "version": "[3.1.0, )"
+          },
           "MongoDB.Driver": {
             "target": "Package",
             "version": "[3.1.0, )"
@@ -32995,6 +33006,10 @@
             "target": "Package",
             "version": "[8.0.11, )",
             "autoReferenced": true
+          },
+          "MongoDB.Bson": {
+            "target": "Package",
+            "version": "[3.1.0, )"
           },
           "MongoDB.Driver": {
             "target": "Package",
