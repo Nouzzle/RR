@@ -27,7 +27,7 @@
 <Color x:Key="SubtleGray">#E5E7EB</Color>
 
 
-<Color x:Key="AccentColor">#757575</Color> <!-- Clean neutral grey -->
+<Color x:Key="AccentColor">#757575</Color> 
          
 
             <!-- Global Theme Resources -->

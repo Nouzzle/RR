@@ -1,3 +1,4 @@
+// Films.xaml.cs
 using System;
 using System.Collections.ObjectModel;
 using Microsoft.Maui.Controls;
@@ -30,7 +31,7 @@ namespace RateReel.Pages.Homepage
             BindingContext = this;
             FilmsCollectionView.ItemsSource = FilteredMovies;
 
-            // Fetch films on initialization
+            // Fetch films bwang
             FetchFilmsAsync();
         }
 
@@ -45,7 +46,7 @@ namespace RateReel.Pages.Homepage
                     AllMovies.Add(film);
                 }
 
-                
+                // Initialize FilteredMoviesssss
                 FilteredMovies.Clear();
                 foreach (var film in AllMovies)
                 {
@@ -59,7 +60,8 @@ namespace RateReel.Pages.Homepage
             }
         }
 
-                private async void OnSearchBarTextChanged(object sender, TextChangedEventArgs e)
+       
+        private async void OnSearchBarTextChanged(object sender, TextChangedEventArgs e)
         {
             var searchText = e.NewTextValue?.ToLower() ?? "";
             FilteredMovies.Clear();
@@ -94,7 +96,7 @@ namespace RateReel.Pages.Homepage
             if (e.CurrentSelection.FirstOrDefault() is Film selectedFilm)
             {
                 await Navigation.PushAsync(new FilmDetailsPage(selectedFilm));
-                
+                // Deselect the item
                 ((CollectionView)sender).SelectedItem = null;
             }
         }

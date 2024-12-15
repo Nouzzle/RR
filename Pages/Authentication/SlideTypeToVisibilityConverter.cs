@@ -2,7 +2,6 @@ using System;
 using System.Globalization;
 using Microsoft.Maui.Controls;
 using RateReel.Models; 
-
 namespace RateReel.Converters
 {
     public class SlideTypeToVisibilityConverter : IValueConverter

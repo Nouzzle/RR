@@ -32,13 +32,13 @@ namespace RateReel.Pages.Homepage
             RecentReviews = new ObservableCollection<Review>();
             App.Reviews.CollectionChanged += Reviews_CollectionChanged;
             LoadRecentReviews();
-            // Retrieve TmdbService API
+            // Retrieve TmdbService from the service provider
             _tmdbService = App.ServiceProvider.GetService<TmdbService>();
 
             BindingContext = this;
             FilmsCollectionView.ItemsSource = FilteredMovies;
 
-          
+            // Fetch films on initialization
             FetchFilmsAsync();
         }
 
@@ -72,7 +72,7 @@ namespace RateReel.Pages.Homepage
             catch (Exception ex)
             {
                 Debug.WriteLine($"Error in LoadRecentReviews: {ex.Message}");
-                
+              
             }
         }
 
@@ -93,7 +93,7 @@ namespace RateReel.Pages.Homepage
                     AllMovies.Add(film);
                 }
 
-                // Initialize FilteredMovies with all films
+                // Initialize FilteredMovies 
                 FilteredMovies.Clear();
                 foreach (var film in AllMovies)
                 {
@@ -124,7 +124,7 @@ namespace RateReel.Pages.Homepage
             if (e.CurrentSelection.FirstOrDefault() is Film selectedFilm)
             {
                 await Navigation.PushAsync(new FilmDetailsPage(selectedFilm));
-                
+                // Deselect the item
                 ((CollectionView)sender).SelectedItem = null;
             }
         }

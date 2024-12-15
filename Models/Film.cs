@@ -19,10 +19,9 @@ namespace RateReel.Models
         [JsonProperty("overview")]
         public string Description { get; set; }
 
-        //  to map TMDB data
+        //  TMDB data
         public string PosterUrl => $"https://image.tmdb.org/t/p/w500{PosterPath}";
         public string Rating => $"{VoteAverage}/10";
         public string Year => ReleaseDate?.Split('-')[0];
-
     }
 }

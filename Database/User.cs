@@ -4,7 +4,7 @@ using MongoDB.Bson.Serialization.Attributes;
 public class User
 {
     [BsonId]
-    [BsonRepresentation(BsonType.ObjectId)] // MongoDB to generate _id
+    [BsonRepresentation(BsonType.ObjectId)] 
     public string Id { get; set; } = ObjectId.GenerateNewId().ToString(); 
 
     public string Username { get; set; }

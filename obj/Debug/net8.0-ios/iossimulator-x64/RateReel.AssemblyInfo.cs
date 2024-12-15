@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("RateReel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+a22f13d8c74437efcc3cf93cb54fcca7de9d94fc")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0+8bddca5b0a64755e68b67bf0816cda29b7bbff60")]
 [assembly: System.Reflection.AssemblyProductAttribute("RateReel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("RateReel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

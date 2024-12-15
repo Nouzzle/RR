@@ -10,13 +10,15 @@ namespace RateReel.Services
     public class TmdbService
     {
         private readonly HttpClient _httpClient;
-        private const string ApiKey = "057f705441ffc6217091e135060edf27"; //  TMDB API key
+        private const string ApiKey = "057f705441ffc6217091e135060edf27"; // TMDB API key
         private const string BaseUrl = "https://api.themoviedb.org/3/";
 
         public TmdbService(HttpClient httpClient)
         {
             _httpClient = httpClient;
         }
+
+        
 
         public async Task<List<Film>> GetPopularFilmsAsync()
         {
@@ -27,6 +29,8 @@ namespace RateReel.Services
             return result?.Results ?? new List<Film>();
         }
 
+        
+
         public async Task<List<Film>> SearchFilmsAsync(string query)
         {
             var response = await _httpClient.GetAsync($"{BaseUrl}search/movie?api_key={ApiKey}&language=en-US&query={Uri.EscapeDataString(query)}&page=1&include_adult=false");
@@ -35,6 +39,7 @@ namespace RateReel.Services
             var result = JsonConvert.DeserializeObject<TmdbResponse>(json);
             return result?.Results ?? new List<Film>();
         }
+        
     }
 
     public class TmdbResponse

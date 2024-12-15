@@ -26,15 +26,17 @@
                                Aspect="AspectFill"/>
                     </Frame>
 
+                    
+
                     <!-- Username with Binding -->
                     <Label Text="{Binding Username}"
                            FontSize="20"
                            FontAttributes="Bold"
                            HorizontalOptions="Center"
                            TextColor="{AppThemeBinding Light={StaticResource LightTextColor}, Dark={StaticResource DarkTextColor}}"/>
-           
+                    <!-- Ensure Username is displayed -->
 
-                   
+                    <!-- Stats with Bindings -->
                     <Grid ColumnDefinitions="*,*" 
                           ColumnSpacing="20"
                           Margin="0,10">
@@ -89,8 +91,16 @@
                             HorizontalOptions="Start"
                             Padding="0"
                             Clicked="OnBackToHomeClicked"/>
+                     <Button
+                            Text="Delete Account"
+                            BackgroundColor="Transparent"
+                            TextColor="{AppThemeBinding Light={StaticResource LightTextColor}, Dark={StaticResource DarkTextColor}}"
+                            HorizontalOptions="Start"
+                            Padding="0"
+                            Clicked="OnDeleteAccountClicked" />
+       
 
-                    <!-- Sign Out  -->
+                    <!-- Sign Out with Click Handler -->
                     <Button Text="Sign Out"
                             BackgroundColor="Transparent"
                             TextColor="{StaticResource AccentColor}"

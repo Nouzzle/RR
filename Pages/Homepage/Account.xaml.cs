@@ -2,6 +2,8 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using Microsoft.Maui.Controls;
 using System.Linq;
+using RateReel.Models;
+using RateReel.Services;
 
 namespace RateReel.Pages.Homepage
 {
@@ -10,9 +12,12 @@ namespace RateReel.Pages.Homepage
         private string username;
         private int reviewCount = 0;
         private int filmsCount = 0;
+        private readonly MongoDbService _mongoDbService;
+        
 
         public string Username
         {
+            
             get => username;
             set
             {
@@ -54,11 +59,13 @@ namespace RateReel.Pages.Homepage
 {
     InitializeComponent();
     BindingContext = this;
+    _mongoDbService = new MongoDbService();
 
     // Initialize Username from LoggedInUsername
     Username = App.LoggedInUsername;
     System.Diagnostics.Debug.WriteLine($"Account Page: Username set to {Username}");
 
+    // Subscribe to the message
     MessagingCenter.Subscribe<FilmDetailsPage>(this, "UpdateCounts", (sender) => {
         UpdateCounts();
     });
@@ -93,6 +100,32 @@ namespace RateReel.Pages.Homepage
             }
         }
 
+        private async void OnDeleteAccountClicked(object sender, EventArgs e)
+{
+    var confirm = await DisplayAlert(
+        "Delete Account",
+        "Are you sure you want to delete your account? This action cannot be undone.",
+        "Yes", "No");
+
+    if (confirm)
+    {
+        try
+        {
+            
+            await _mongoDbService.DeleteUserAsync(App.LoggedInUsername);
+
+            // Redirect to Login Page atau Home
+            await Shell.Current.GoToAsync("//Login");
+        }
+        catch (Exception ex)
+        {
+            await DisplayAlert("Error", $"Failed to delete account: {ex.Message}", "OK");
+        }
+    }
+}
+
+
+
         private async void OnSignOutClicked(object sender, EventArgs e)
         {
             bool answer = await DisplayAlert("Sign Out", "Are you sure you want to sign out?", "Yes", "No");
@@ -122,7 +155,7 @@ namespace RateReel.Pages.Homepage
             }
         }
 
-        // INotifyPropertyChanged implementation
+
         public event PropertyChangedEventHandler PropertyChanged;
 
         protected void OnPropertyChanged([CallerMemberName] string propertyName = "")

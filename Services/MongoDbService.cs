@@ -10,14 +10,24 @@ namespace RateReel.Services
     public class MongoDbService
     {
         private readonly IMongoCollection<User> _usersCollection;
+         private readonly IMongoCollection<Film> _filmCollection;
+
+        private readonly IMongoCollection<Review> _reviewsCollection;
 
         public MongoDbService()
         {
-            //  MongoDB connection string
+            
             var client = new MongoClient("mongodb://localhost:27017");
             var database = client.GetDatabase("RateReel"); // database name
-            _usersCollection = database.GetCollection<User>("Users"); // collection name
+            _usersCollection = database.GetCollection<User>("Users"); // user data
+          
+
+
         }
+
+        
+
+        
 
       public async Task SaveUserAsync(User user)
 {
@@ -65,5 +75,61 @@ namespace RateReel.Services
                 throw;
             }
         }
+
+        public async Task SaveReviewAsync(Review review)
+{
+    await _reviewsCollection.InsertOneAsync(review);
+}
+
+public async Task<List<Review>> GetReviewsByUserAsync(string username)
+{
+    return await _reviewsCollection.Find(r => r.Username == username).ToListAsync();
+}
+
+public async Task<List<Review>> GetReviewsByMovieAsync(string movieTitle)
+{
+    return await _reviewsCollection.Find(r => r.MovieTitle == movieTitle).ToListAsync();
+}
+public async Task<List<Review>> GetReviewsByUsernameAsync(string username)
+{
+    try
+    {
+        var filter = Builders<Review>.Filter.Eq(r => r.Username, username);
+        return await _reviewsCollection.Find(filter).ToListAsync();
+    }
+    catch (Exception ex)
+    {
+        System.Diagnostics.Debug.WriteLine($"Error fetching reviews: {ex.Message}");
+        return new List<Review>();
+    }
+}
+
+public async Task<List<Review>> GetUserReviewsAsync(string username)
+{
+    var filter = Builders<Review>.Filter.Eq(r => r.Username, username);
+    var result = await _reviewsCollection.Find(filter).ToListAsync();
+    return result;
+}
+
+public async Task DeleteUserAsync(string username)
+        {
+            var filter = Builders<User>.Filter.Eq(u => u.Username, username);
+            await _usersCollection.DeleteOneAsync(filter);
+            System.Diagnostics.Debug.WriteLine($"User with username {username} has been deleted.");
+        }
+
+public async Task<List<Review>> GetAllReviewsAsync()
+{
+    var result = await _reviewsCollection.Find(_ => true).ToListAsync();
+    return result;
+}
+
+
+
+
+
+
+
+        
     }
 }

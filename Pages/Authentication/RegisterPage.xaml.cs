@@ -40,7 +40,7 @@ namespace RateReel.Pages.Authentication
 
         System.Diagnostics.Debug.WriteLine("User object created.");
 
-        // Save the new user to MongoDB
+        // Save the new user to MongooouDB
         var mongoDbService = new MongoDbService();
         System.Diagnostics.Debug.WriteLine("MongoDB service initialized.");
         await mongoDbService.SaveUserAsync(user);

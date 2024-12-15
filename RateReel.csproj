@@ -43,6 +43,7 @@
     	<MauiImage Include="Resources\Images\theme_sun6969.png" BaseSize="24,24" />	
 		<MauiImage Include="Resources\Images\themehomes_6969.png" BaseSize="20,20" />
 		<MauiImage Include="Resources\Images\timelines_6969.png" BaseSize="20,20" />
+		<MauiImage Include="Resources\Images\films_6969.png" BaseSize="20,20" />
 		<MauiImage Include="Resources\Images\dunep2.png" BaseSize="300,185" />
 		<MauiImage Include="Resources\Images\everythingeverywhere.png" BaseSize="300,185" />
 		<MauiImage Include="Resources\Images\godfather.png" BaseSize="300,185" />
@@ -74,7 +75,9 @@
 		<PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="8.0.0" />
 		<PackageReference Include="MongoDB.Bson" Version="3.1.0" />
 		<PackageReference Include="MongoDB.Driver" Version="3.1.0" />
+		<PackageReference Include="Moq" Version="4.20.72" />
 		<PackageReference Include="Newtonsoft.Json" Version="13.0.3" />
+		<PackageReference Include="xunit" Version="2.9.2" />
 	</ItemGroup>
 	
 

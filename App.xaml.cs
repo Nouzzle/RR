@@ -31,7 +31,7 @@ namespace RateReel
 //                 if (fileService == null)
 //                 {
 // #if DEBUG
-//                     // Development path 
+//                     // Development path - update this to your actual project path
 //                     var projectDirectory = "/Users/vinn/Desktop/RateReel/Database-list";
 // #else
 //                     // Production path

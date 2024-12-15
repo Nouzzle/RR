@@ -46,6 +46,7 @@ namespace RateReel.Pages.Authentication
             InitializeComponent();
             _mongoDbService = new MongoDbService();
 
+            //  3 slides
             Slides = new List<SlideModel>
             {
                 new SlideModel
@@ -69,6 +70,7 @@ namespace RateReel.Pages.Authentication
 
         private void CarouselView_PositionChanged(object sender, PositionChangedEventArgs e)
         {
+            
         }
 
         private async void OnLoginClicked(object sender, EventArgs e)
@@ -84,11 +86,11 @@ namespace RateReel.Pages.Authentication
                     return;
                 }
 
-                // Authenticate with MongoDB
+                // auth with MongoDB
                 var user = await _mongoDbService.GetUserAsync(username);
                 if (user != null && user.Password == password)
                 {
-                    
+                   
                     App.LoggedInUsername = username;
 
                     // Enable Flyout and navigation bars after successful login

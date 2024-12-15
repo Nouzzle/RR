@@ -46,7 +46,7 @@ namespace RateReel.Pages.Homepage
 
             if (existingReview != null)
             {
-                // Update the existing review
+                
                 existingReview.Rating = rating;
                 existingReview.ReviewText = reviewText;
                 existingReview.PosterUrl = CurrentFilm.PosterUrl;
@@ -72,8 +72,8 @@ namespace RateReel.Pages.Homepage
                 await DisplayAlert("Success", "Your review has been submitted.", "OK");
             }
 
-            // Account page to update counts
-            MessagingCenter.Send(this, "UpdateCounts");
+       
+
 
 
             RatingSlider.Value = 3;

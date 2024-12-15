@@ -5,7 +5,6 @@ namespace RateReel.Selectors
 {
     public class SlideDataTemplateSelector : DataTemplateSelector
     {
-        
         public DataTemplate? IntroTemplate { get; set; }
         public DataTemplate? InvitationTemplate { get; set; }
         public DataTemplate? LoginTemplate { get; set; }
