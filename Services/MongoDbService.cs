@@ -5,25 +5,33 @@ using System.Threading.Tasks;
 using MongoDB.Bson;
 
 
+
 namespace RateReel.Services
 {
     public class MongoDbService
     {
         private readonly IMongoCollection<User> _usersCollection;
+        
          private readonly IMongoCollection<Film> _filmCollection;
 
-        private readonly IMongoCollection<Review> _reviewsCollection;
+      private readonly IMongoCollection<Review> _reviewsCollection;
 
-        public MongoDbService()
-        {
-            
-            var client = new MongoClient("mongodb://localhost:27017");
-            var database = client.GetDatabase("RateReel"); // database name
-            _usersCollection = database.GetCollection<User>("Users"); // user data
-          
+public MongoDbService()
+{
+    var client = new MongoClient("mongodb://localhost:27017");
+    var database = client.GetDatabase("RateReel");
+    
+    _usersCollection = database.GetCollection<User>("Users");
+    _reviewsCollection = database.GetCollection<Review>("Reviews"); 
+}
 
 
-        }
+    public async Task MarkReviewsAsDeletedAsync(string username)
+{
+    var filter = Builders<Review>.Filter.Eq(r => r.Username, username);
+    var update = Builders<Review>.Update.Set(r => r.Username, "Account Deleted");
+    await _reviewsCollection.UpdateManyAsync(filter, update);
+}
 
         
 
@@ -111,6 +119,24 @@ public async Task<List<Review>> GetUserReviewsAsync(string username)
     return result;
 }
 
+public async Task SaveOrUpdateReviewAsync(Review review)
+{
+    var filter = Builders<Review>.Filter.And(
+        Builders<Review>.Filter.Eq(r => r.Username, review.Username),
+        Builders<Review>.Filter.Eq(r => r.MovieTitle, review.MovieTitle)
+    );
+
+    var update = Builders<Review>.Update
+        .Set(r => r.Rating, review.Rating)
+        .Set(r => r.ReviewText, review.ReviewText)
+        .Set(r => r.ReviewDate, DateTime.Now);
+
+    var options = new UpdateOptions { IsUpsert = true }; // Insert if not exist, update if exist
+
+    await _reviewsCollection.UpdateOneAsync(filter, update, options);
+}
+
+
 public async Task DeleteUserAsync(string username)
         {
             var filter = Builders<User>.Filter.Eq(u => u.Username, username);
@@ -122,6 +148,11 @@ public async Task<List<Review>> GetAllReviewsAsync()
 {
     var result = await _reviewsCollection.Find(_ => true).ToListAsync();
     return result;
+}
+
+public async Task<List<Review>> GetReviewsAsync()
+{
+    return await _reviewsCollection.Find(_ => true).ToListAsync();
 }
 
 

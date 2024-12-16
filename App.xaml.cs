@@ -19,7 +19,7 @@ namespace RateReel
       // static FileService fileService;
 
         public static IServiceProvider ServiceProvider { get; private set; }
-        public static string LoggedInUsername { get; set; }
+        public static string LoggedInUsername { get; set; } = string.Empty;
 
         public static ObservableCollection<Review> Reviews { get; set; } = new ObservableCollection<Review>();
 
@@ -57,6 +57,35 @@ namespace RateReel
 
             MainPage = new AppShell();
         }
+
+public static void ResetAppState()
+{
+    LoggedInUsername = string.Empty;
+   
+}
+
+public static async Task LoadReviewsAsync(MongoDbService mongoService)
+{
+    try
+    {
+        var allReviews = await mongoService.GetAllReviewsAsync();
+        App.Reviews.Clear();
+        foreach (var review in allReviews)
+        {
+            App.Reviews.Add(review);
+        }
+        System.Diagnostics.Debug.WriteLine($"Loaded {App.Reviews.Count} reviews.");
+    }
+    catch (Exception ex)
+    {
+        System.Diagnostics.Debug.WriteLine($"Error loading reviews: {ex.Message}");
+    }
+}
+
+
+
+
+
 
         private void ConfigureServices(IServiceCollection services)
         {

@@ -11,6 +11,7 @@ namespace RateReel.Pages.Authentication
     public partial class LoginPage : ContentPage, INotifyPropertyChanged
     {
         private string _username = string.Empty;
+        
         public string Username
         {
             get => _username;
@@ -91,14 +92,15 @@ namespace RateReel.Pages.Authentication
                 if (user != null && user.Password == password)
                 {
                    
-                    App.LoggedInUsername = username;
+                     App.LoggedInUsername = user.Username; 
 
                     // Enable Flyout and navigation bars after successful login
                     Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
                     Shell.SetNavBarIsVisible(Shell.Current, true);
                     Shell.SetTabBarIsVisible(Shell.Current, true);
-
+                    await App.LoadReviewsAsync(_mongoDbService);
                     await Shell.Current.GoToAsync("//Home");
+                    
                 }
                 else
                 {

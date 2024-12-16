@@ -2,6 +2,8 @@ using Microsoft.Maui.Controls;
 using RateReel.Models;
 using System;
 using System.Linq;
+using RateReel.Services;
+
 
 namespace RateReel.Pages.Homepage
 {
@@ -25,59 +27,58 @@ namespace RateReel.Pages.Homepage
             DescriptionLabel.Text = film.Description;
         }
 
-        private async void OnSubmitReviewClicked(object sender, EventArgs e)
-        {
-            var rating = Math.Round(RatingSlider.Value, 1);
-            var reviewText = ReviewEditor.Text?.Trim();
+        private readonly MongoDbService _mongoDbService = new MongoDbService();
 
-            if (string.IsNullOrEmpty(reviewText))
-            {
-                await DisplayAlert("Error", "Please enter a review.", "OK");
-                return;
-            }
+private async void OnSubmitReviewClicked(object sender, EventArgs e)
+{
+    var rating = Math.Round(RatingSlider.Value, 1);
+    var reviewText = ReviewEditor.Text?.Trim();
 
-            if (string.IsNullOrEmpty(App.LoggedInUsername))
-            {
-                await DisplayAlert("Error", "You must be logged in to submit a review.", "OK");
-                return;
-            }
+    if (string.IsNullOrEmpty(reviewText))
+    {
+        await DisplayAlert("Error", "Please enter a review.", "OK");
+        return;
+    }
 
-            var existingReview = App.Reviews.FirstOrDefault(r => r.Username == App.LoggedInUsername && r.MovieTitle == CurrentFilm.Title);
+    if (string.IsNullOrEmpty(App.LoggedInUsername))
+    {
+        await DisplayAlert("Error", "You must be logged in to submit a review.", "OK");
+        return;
+    }
 
-            if (existingReview != null)
-            {
-                
-                existingReview.Rating = rating;
-                existingReview.ReviewText = reviewText;
-                existingReview.PosterUrl = CurrentFilm.PosterUrl;
-                existingReview.ReviewDate = DateTime.Now;
+    var newReview = new Review
+    {
+        Username = App.LoggedInUsername,
+        MovieTitle = CurrentFilm.Title,
+        Rating = rating,
+        ReviewText = reviewText,
+        PosterUrl = CurrentFilm.PosterUrl,
+        ReviewDate = DateTime.Now
+    };
 
-                await DisplayAlert("Success", "Your review has been updated.", "OK");
-            }
-            else
-            {
-                // Add a new review
-                var newReview = new Review
-                {
-                    Username = App.LoggedInUsername,
-                    MovieTitle = CurrentFilm.Title,
-                    Rating = rating,
-                    ReviewText = reviewText,
-                    PosterUrl = CurrentFilm.PosterUrl,
-                    ReviewDate = DateTime.Now
-                };
+    // Simpan ke MongoDB (Update atau Insert jika belum ada)
+    var mongoDbService = new MongoDbService();
+    await mongoDbService.SaveOrUpdateReviewAsync(newReview);
 
-                App.Reviews.Add(newReview);
+    // Update koleksi lokal App.Reviews
+    var existingReview = App.Reviews.FirstOrDefault(r =>
+        r.Username == newReview.Username && r.MovieTitle == newReview.MovieTitle);
 
-                await DisplayAlert("Success", "Your review has been submitted.", "OK");
-            }
+    if (existingReview != null)
+        App.Reviews.Remove(existingReview);
 
-       
+    App.Reviews.Add(newReview);
+
+    await DisplayAlert("Success", "Your review has been submitted or updated.", "OK");
+
+    // Reset UI
+    RatingSlider.Value = 3;
+    ReviewEditor.Text = string.Empty;
+
+    // Kirim notifikasi untuk memperbarui tampilan profile
+    MessagingCenter.Send(this, "UpdateCounts");
+}
 
 
-
-            RatingSlider.Value = 3;
-            ReviewEditor.Text = string.Empty;
-        }
     }
 }

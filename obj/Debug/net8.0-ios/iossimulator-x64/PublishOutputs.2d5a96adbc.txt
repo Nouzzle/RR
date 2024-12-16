@@ -34,6 +34,7 @@
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/zh-Hans/Microsoft.Maui.Controls.resources.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/zh-Hant/Microsoft.Maui.Controls.resources.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/runtimeconfig.bin
+/Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/Castle.Core.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/CommunityToolkit.Maui.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/CommunityToolkit.Maui.Core.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/DnsClient.dll
@@ -59,10 +60,16 @@
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/Microsoft.Maui.Graphics.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/MongoDB.Bson.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/MongoDB.Driver.dll
+/Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/Moq.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/Newtonsoft.Json.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/SharpCompress.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/Snappier.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/System.Diagnostics.DiagnosticSource.dll
+/Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/System.Diagnostics.EventLog.dll
+/Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/xunit.abstractions.dll
+/Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/xunit.assert.dll
+/Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/xunit.core.dll
+/Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/xunit.execution.dotnet.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/ZstdSharp.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/RateReel.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/Microsoft.CSharp.dll
@@ -235,6 +242,7 @@
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/Microsoft.iOS.dll
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/RateReel.pdb
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/Microsoft.iOS.pdb
+/Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/RateReel.deps.json
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/libSystem.Globalization.Native.dylib
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/libSystem.IO.Compression.Native.dylib
 /Users/vinn/Desktop/RateReel copy/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/libSystem.Native.dylib

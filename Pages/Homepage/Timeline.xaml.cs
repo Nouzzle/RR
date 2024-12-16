@@ -3,6 +3,7 @@ using System.Collections.ObjectModel;
 using Microsoft.Maui.Controls;
 using RateReel.Models;
 
+
 namespace RateReel.Pages.Homepage
 {
     public partial class Timeline : ContentPage

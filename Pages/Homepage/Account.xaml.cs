@@ -61,28 +61,36 @@ namespace RateReel.Pages.Homepage
     BindingContext = this;
     _mongoDbService = new MongoDbService();
 
-    // Initialize Username from LoggedInUsername
+    
     Username = App.LoggedInUsername;
     System.Diagnostics.Debug.WriteLine($"Account Page: Username set to {Username}");
 
-    // Subscribe to the message
-    MessagingCenter.Subscribe<FilmDetailsPage>(this, "UpdateCounts", (sender) => {
+   
+   MessagingCenter.Subscribe<object>(this, "UpdateCounts", (sender) =>
+    {
         UpdateCounts();
     });
 
-    // Update the review and films count
-    UpdateCounts();
+
+
+   
+    
+    
 }
-
-        public void UpdateCounts()
+          public void RefreshUserData()
         {
-            var userReviews = App.Reviews.Where(r => r.Username == App.LoggedInUsername).ToList();
-            ReviewCount = userReviews.Count;
-            FilmsCount = userReviews.Select(r => r.MovieTitle).Distinct().Count();
-
-            System.Diagnostics.Debug.WriteLine($"Account Page: ReviewCount={ReviewCount}, FilmsCount={FilmsCount}");
+            OnPropertyChanged(nameof(Username)); 
+            UpdateCounts();
         }
+              public void UpdateCounts()
+{
+    var userReviews = App.Reviews.Where(r => r.Username == App.LoggedInUsername).ToList();
+    ReviewCount = userReviews.Count;
+    FilmsCount = userReviews.Select(r => r.MovieTitle).Distinct().Count();
 
+    OnPropertyChanged(nameof(ReviewCount));
+    OnPropertyChanged(nameof(FilmsCount));
+}
       
 
         private async void OnBackToHomeClicked(object sender, EventArgs e)
@@ -100,7 +108,7 @@ namespace RateReel.Pages.Homepage
             }
         }
 
-        private async void OnDeleteAccountClicked(object sender, EventArgs e)
+       private async void OnDeleteAccountClicked(object sender, EventArgs e)
 {
     var confirm = await DisplayAlert(
         "Delete Account",
@@ -111,10 +119,18 @@ namespace RateReel.Pages.Homepage
     {
         try
         {
-            
+            await _mongoDbService.MarkReviewsAsDeletedAsync(App.LoggedInUsername);
             await _mongoDbService.DeleteUserAsync(App.LoggedInUsername);
 
-            // Redirect to Login Page atau Home
+            // Hapus hanya review milik user yang dihapus
+            var userReviews = App.Reviews.Where(r => r.Username == App.LoggedInUsername).ToList();
+            foreach (var review in userReviews)
+            {
+                App.Reviews.Remove(review);
+            }
+
+            App.LoggedInUsername = string.Empty;
+
             await Shell.Current.GoToAsync("//Login");
         }
         catch (Exception ex)
@@ -123,6 +139,32 @@ namespace RateReel.Pages.Homepage
         }
     }
 }
+
+
+
+protected override async void OnAppearing()
+{
+    base.OnAppearing();
+
+    // Refresh username
+    Username = App.LoggedInUsername;
+
+    // Debuggduefguefue
+    System.Diagnostics.Debug.WriteLine($"Account Page - Current Username: {Username}");
+
+   
+    await App.LoadReviewsAsync(_mongoDbService);
+
+    // Update review n filmsz
+    UpdateCounts();
+
+   
+    System.Diagnostics.Debug.WriteLine($"Account Page - Reviews Count: {ReviewCount}, Films Count: {FilmsCount}");
+
+    OnPropertyChanged(nameof(Username));
+}
+
+
 
 
 
@@ -140,8 +182,8 @@ namespace RateReel.Pages.Homepage
 
                     App.LoggedInUsername = string.Empty; 
                     System.Diagnostics.Debug.WriteLine("LoggedInUsername cleared.");
-
-                    await Shell.Current.GoToAsync("//Login");
+                    App.ResetAppState(); // Reset app state
+    await Shell.Current.GoToAsync("//Login");
 
                     // Hide navigation and tab bars
                     Shell.SetNavBarIsVisible(Shell.Current, false);
