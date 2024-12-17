@@ -22,16 +22,28 @@
     <_LinkerFrameworks Include="AudioToolbox">
       <IsWeak>false</IsWeak>
     </_LinkerFrameworks>
+    <_LinkerFrameworks Include="AuthenticationServices">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
     <_LinkerFrameworks Include="AVFoundation">
       <IsWeak>false</IsWeak>
     </_LinkerFrameworks>
     <_LinkerFrameworks Include="AVKit">
       <IsWeak>false</IsWeak>
     </_LinkerFrameworks>
+    <_LinkerFrameworks Include="BusinessChat">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
     <_LinkerFrameworks Include="CallKit">
       <IsWeak>false</IsWeak>
     </_LinkerFrameworks>
+    <_LinkerFrameworks Include="CarPlay">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
     <_LinkerFrameworks Include="CFNetwork">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
+    <_LinkerFrameworks Include="ClassKit">
       <IsWeak>false</IsWeak>
     </_LinkerFrameworks>
     <_LinkerFrameworks Include="CloudKit">
@@ -133,6 +145,9 @@
     <_LinkerFrameworks Include="IdentityLookup">
       <IsWeak>false</IsWeak>
     </_LinkerFrameworks>
+    <_LinkerFrameworks Include="IdentityLookupUI">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
     <_LinkerFrameworks Include="ImageIO">
       <IsWeak>false</IsWeak>
     </_LinkerFrameworks>
@@ -182,6 +197,12 @@
       <IsWeak>false</IsWeak>
     </_LinkerFrameworks>
     <_LinkerFrameworks Include="MultipeerConnectivity">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
+    <_LinkerFrameworks Include="NaturalLanguage">
+      <IsWeak>false</IsWeak>
+    </_LinkerFrameworks>
+    <_LinkerFrameworks Include="Network">
       <IsWeak>false</IsWeak>
     </_LinkerFrameworks>
     <_LinkerFrameworks Include="NetworkExtension">
@@ -283,9 +304,6 @@
     <_LinkerFrameworks Include="AppTrackingTransparency">
       <IsWeak>true</IsWeak>
     </_LinkerFrameworks>
-    <_LinkerFrameworks Include="AuthenticationServices">
-      <IsWeak>true</IsWeak>
-    </_LinkerFrameworks>
     <_LinkerFrameworks Include="AutomaticAssessmentConfiguration">
       <IsWeak>true</IsWeak>
     </_LinkerFrameworks>
@@ -301,15 +319,6 @@
     <_LinkerFrameworks Include="BrowserEngineKit">
       <IsWeak>true</IsWeak>
     </_LinkerFrameworks>
-    <_LinkerFrameworks Include="BusinessChat">
-      <IsWeak>true</IsWeak>
-    </_LinkerFrameworks>
-    <_LinkerFrameworks Include="CarPlay">
-      <IsWeak>true</IsWeak>
-    </_LinkerFrameworks>
-    <_LinkerFrameworks Include="ClassKit">
-      <IsWeak>true</IsWeak>
-    </_LinkerFrameworks>
     <_LinkerFrameworks Include="CoreHaptics">
       <IsWeak>true</IsWeak>
     </_LinkerFrameworks>
@@ -322,9 +331,6 @@
     <_LinkerFrameworks Include="DeviceDiscoveryExtension">
       <IsWeak>true</IsWeak>
     </_LinkerFrameworks>
-    <_LinkerFrameworks Include="IdentityLookupUI">
-      <IsWeak>true</IsWeak>
-    </_LinkerFrameworks>
     <_LinkerFrameworks Include="LinkPresentation">
       <IsWeak>true</IsWeak>
     </_LinkerFrameworks>
@@ -334,13 +340,7 @@
     <_LinkerFrameworks Include="MetricKit">
       <IsWeak>true</IsWeak>
     </_LinkerFrameworks>
-    <_LinkerFrameworks Include="NaturalLanguage">
-      <IsWeak>true</IsWeak>
-    </_LinkerFrameworks>
     <_LinkerFrameworks Include="NearbyInteraction">
-      <IsWeak>true</IsWeak>
-    </_LinkerFrameworks>
-    <_LinkerFrameworks Include="Network">
       <IsWeak>true</IsWeak>
     </_LinkerFrameworks>
     <_LinkerFrameworks Include="OSLog">

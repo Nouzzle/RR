@@ -12,7 +12,7 @@
       <CodesignDisableTimestamp>true</CodesignDisableTimestamp>
       <CodesignKeychain></CodesignKeychain>
       <CodesignUseHardenedRuntime></CodesignUseHardenedRuntime>
-      <SourceProjectPath>/Users/vinn/Desktop/RateReel copy</SourceProjectPath>
+      <SourceProjectPath>/Users/vinn/Desktop/RateReel</SourceProjectPath>
     </_CodesignBundle>
   </ItemGroup>
 </Project>
