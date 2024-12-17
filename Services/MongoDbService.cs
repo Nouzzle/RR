@@ -5,25 +5,37 @@ using System.Threading.Tasks;
 using MongoDB.Bson;
 
 
-
 namespace RateReel.Services
 {
     public class MongoDbService
     {
-        private readonly IMongoCollection<User> _usersCollection;
-        
-         private readonly IMongoCollection<Film> _filmCollection;
+              private readonly IMongoCollection<User> _usersCollection;
+        private readonly IMongoCollection<Film> _filmCollection;
+        private readonly IMongoCollection<Review> _reviewsCollection;
 
-      private readonly IMongoCollection<Review> _reviewsCollection;
-
-public MongoDbService()
-{
-    var client = new MongoClient("mongodb://localhost:27017");
-    var database = client.GetDatabase("RateReel");
-    
-    _usersCollection = database.GetCollection<User>("Users");
-    _reviewsCollection = database.GetCollection<Review>("Reviews"); 
-}
+ public MongoDbService()
+        {
+           const string connectionUri = "mongodb+srv://melvinorizky:random2910@cluster0.cgcb6.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+            var settings = MongoClientSettings.FromConnectionString(connectionUri);
+            // Set the ServerApi field of the settings object to set the version of the Stable API on the client
+            settings.ServerApi = new ServerApi(ServerApiVersion.V1);
+            // Create a new client and connect to the server
+            var client = new MongoClient(settings);
+            // Removed the synchronous ping to prevent blocking
+            /*
+            try {
+                var result = client.GetDatabase("admin").RunCommand<BsonDocument>(new BsonDocument("ping", 1));
+                Console.WriteLine("Pinged your deployment. You successfully connected to MongoDB!");
+            } catch (Exception ex) {
+                Console.WriteLine(ex);
+            }
+            */
+            
+            var database = client.GetDatabase("RateReel"); // Initialize the database
+            _usersCollection = database.GetCollection<User>("Users");
+            _reviewsCollection = database.GetCollection<Review>("Reviews"); 
+            _filmCollection = database.GetCollection<Film>("Films"); // Initialized _filmCollection
+        }
 
 
     public async Task MarkReviewsAsDeletedAsync(string username)
