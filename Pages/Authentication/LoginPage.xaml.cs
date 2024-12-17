@@ -5,13 +5,14 @@ using System.ComponentModel;
 using System.Runtime.CompilerServices;
 using RateReel.Services;
 using System;
+using RateReelHelpers;
 
 namespace RateReel.Pages.Authentication
 {
     public partial class LoginPage : ContentPage, INotifyPropertyChanged
     {
         private string _username = string.Empty;
-        
+
         public string Username
         {
             get => _username;
@@ -47,7 +48,7 @@ namespace RateReel.Pages.Authentication
             InitializeComponent();
             _mongoDbService = new MongoDbService();
 
-            //  3 slides
+            // 3 slides
             Slides = new List<SlideModel>
             {
                 new SlideModel
@@ -69,11 +70,6 @@ namespace RateReel.Pages.Authentication
             BindingContext = this;
         }
 
-        private void CarouselView_PositionChanged(object sender, PositionChangedEventArgs e)
-        {
-            
-        }
-
         private async void OnLoginClicked(object sender, EventArgs e)
         {
             try
@@ -81,26 +77,23 @@ namespace RateReel.Pages.Authentication
                 string username = Username?.Trim();
                 string password = Password?.Trim();
 
-                if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
+                // Validate username and password using RateReelHelpers
+                if (!ValidationHelper.IsValidUsername(username) || !ValidationHelper.IsStrongPassword(password))
                 {
-                    await DisplayAlert("Error", "Please enter both username and password.", "OK");
+                    await DisplayAlert("Error", "Invalid username or password format.", "OK");
                     return;
                 }
 
-                // auth with MongoDB
                 var user = await _mongoDbService.GetUserAsync(username);
                 if (user != null && user.Password == password)
                 {
-                   
-                     App.LoggedInUsername = user.Username; 
+                    App.LoggedInUsername = user.Username;
 
-                    // Enable Flyout and navigation bars after successful login
                     Shell.Current.FlyoutBehavior = FlyoutBehavior.Flyout;
                     Shell.SetNavBarIsVisible(Shell.Current, true);
                     Shell.SetTabBarIsVisible(Shell.Current, true);
                     await App.LoadReviewsAsync(_mongoDbService);
                     await Shell.Current.GoToAsync("//Home");
-                    
                 }
                 else
                 {
@@ -119,6 +112,12 @@ namespace RateReel.Pages.Authentication
         private async void OnRegisterTapped(object sender, EventArgs e)
         {
             await Shell.Current.GoToAsync("Register");
+        }
+
+        // FIX: Missing method for the PositionChanged event
+        private void CarouselView_PositionChanged(object sender, PositionChangedEventArgs e)
+        {
+            System.Diagnostics.Debug.WriteLine($"Carousel Position Changed: {e.CurrentPosition}");
         }
 
         public event PropertyChangedEventHandler PropertyChanged;

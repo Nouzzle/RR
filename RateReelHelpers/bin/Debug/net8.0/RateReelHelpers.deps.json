@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "RateReelHelpers/1.0.0": {
+        "runtime": {
+          "RateReelHelpers.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "RateReelHelpers/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}

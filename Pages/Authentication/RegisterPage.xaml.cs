@@ -2,6 +2,7 @@ using Microsoft.Maui.Controls;
 using System;
 using RateReel.Models;
 using RateReel.Services;
+using RateReelHelpers; 
 
 namespace RateReel.Pages.Authentication
 {
@@ -26,11 +27,12 @@ namespace RateReel.Pages.Authentication
 
         System.Diagnostics.Debug.WriteLine($"Username: {username}, Password: {password}");
 
-        if (string.IsNullOrEmpty(username) || string.IsNullOrEmpty(password))
-        {
-            await DisplayAlert("Error", "Please enter both username and password.", "OK");
-            return;
-        }
+     if (!ValidationHelper.IsValidUsername(username) || !ValidationHelper.IsStrongPassword(password))
+                {
+                    await DisplayAlert("Error", "Invalid username or password format. Username must have at least 3 characters, and the password must be at least 5 characters long and include a number.", "OK");
+
+                    return;
+                }
 
         var user = new User
         {

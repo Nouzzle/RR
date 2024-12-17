@@ -717,6 +717,15 @@
           }
         }
       },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -3435,6 +3444,15 @@
           }
         }
       },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -6125,6 +6143,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
         }
       },
       "SharpCompress/0.30.1": {
@@ -8819,6 +8846,15 @@
           }
         }
       },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -11509,6 +11545,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
         }
       },
       "SharpCompress/0.30.1": {
@@ -14203,6 +14248,15 @@
           }
         }
       },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -16895,6 +16949,15 @@
           }
         }
       },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -19568,6 +19631,15 @@
           }
         }
       },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -20495,6 +20567,15 @@
           }
         }
       },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -21394,6 +21475,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
         }
       },
       "SharpCompress/0.30.1": {
@@ -22297,6 +22387,15 @@
           }
         }
       },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -23196,6 +23295,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
         }
       },
       "SharpCompress/0.30.1": {
@@ -24099,6 +24207,15 @@
           }
         }
       },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -24998,6 +25115,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
         }
       },
       "SharpCompress/0.30.1": {
@@ -25905,6 +26031,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
         }
       },
       "SharpCompress/0.30.1": {
@@ -26834,6 +26969,15 @@
           }
         }
       },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -27733,6 +27877,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
         }
       },
       "SharpCompress/0.30.1": {
@@ -28636,6 +28789,15 @@
           }
         }
       },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -29535,6 +29697,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
         }
       },
       "SharpCompress/0.30.1": {
@@ -30438,6 +30609,15 @@
           }
         }
       },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        }
+      },
       "SharpCompress/0.30.1": {
         "type": "package",
         "compile": {
@@ -31337,6 +31517,15 @@
           "lib/net6.0/Newtonsoft.Json.dll": {
             "related": ".xml"
           }
+        }
+      },
+      "RateReelHelpers/1.0.0": {
+        "type": "package",
+        "compile": {
+          "lib/net8.0/RateReelHelpers.dll": {}
+        },
+        "runtime": {
+          "lib/net8.0/RateReelHelpers.dll": {}
         }
       },
       "SharpCompress/0.30.1": {
@@ -33162,6 +33351,17 @@
         "newtonsoft.json.13.0.3.nupkg.sha512",
         "newtonsoft.json.nuspec",
         "packageIcon.png"
+      ]
+    },
+    "RateReelHelpers/1.0.0": {
+      "sha512": "yI5TiiwGbU6xb9pT5jqwgUyTjQZj+rTId8l9YEVpbBsdPrvdPrNVMJUFZoi8dlz37NIBeQv9zzSSgHTEOnD9pg==",
+      "type": "package",
+      "path": "ratereelhelpers/1.0.0",
+      "files": [
+        ".nupkg.metadata",
+        "lib/net8.0/RateReelHelpers.dll",
+        "ratereelhelpers.1.0.0.nupkg.sha512",
+        "ratereelhelpers.nuspec"
       ]
     },
     "SharpCompress/0.30.1": {
@@ -35638,6 +35838,7 @@
       "MongoDB.Driver >= 3.1.0",
       "Moq >= 4.20.72",
       "Newtonsoft.Json >= 13.0.3",
+      "RateReelHelpers >= 1.0.0",
       "xunit >= 2.9.2"
     ],
     "net8.0-ios18.0": [
@@ -35651,6 +35852,7 @@
       "MongoDB.Driver >= 3.1.0",
       "Moq >= 4.20.72",
       "Newtonsoft.Json >= 13.0.3",
+      "RateReelHelpers >= 1.0.0",
       "xunit >= 2.9.2"
     ],
     "net8.0-maccatalyst18.0": [
@@ -35664,6 +35866,7 @@
       "MongoDB.Driver >= 3.1.0",
       "Moq >= 4.20.72",
       "Newtonsoft.Json >= 13.0.3",
+      "RateReelHelpers >= 1.0.0",
       "xunit >= 2.9.2"
     ]
   },
@@ -35689,9 +35892,9 @@
         "net8.0-maccatalyst"
       ],
       "sources": {
+        "/Users/vinn/.nuget/NuGet/RateReelHelpers/output": {},
         "/usr/local/share/dotnet/library-packs": {},
-        "https://api.nuget.org/v3/index.json": {},
-        "https://www.nuget.org/packages/RateReelPackage/": {}
+        "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
         "net8.0-android34.0": {
@@ -35765,6 +35968,10 @@
             "target": "Package",
             "version": "[13.0.3, )"
           },
+          "RateReelHelpers": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "xunit": {
             "target": "Package",
             "version": "[2.9.2, )"
@@ -35801,14 +36008,6 @@
           {
             "name": "Microsoft.Android.Runtime.34.android-x86",
             "version": "[34.0.145, 34.0.145]"
-          },
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
           }
         ],
         "frameworkReferences": {
@@ -35866,6 +36065,10 @@
             "target": "Package",
             "version": "[13.0.3, )"
           },
+          "RateReelHelpers": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "xunit": {
             "target": "Package",
             "version": "[2.9.2, )"
@@ -35884,20 +36087,12 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
             "name": "Microsoft.iOS.Ref.net8.0_18.0",
             "version": "[18.0.8316, 18.0.8316]"
           },
           {
             "name": "Microsoft.iOS.Runtime.iossimulator-x64.net8.0_18.0",
             "version": "[18.0.8316, 18.0.8316]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
           }
         ],
         "frameworkReferences": {
@@ -35955,6 +36150,10 @@
             "target": "Package",
             "version": "[13.0.3, )"
           },
+          "RateReelHelpers": {
+            "target": "Package",
+            "version": "[1.0.0, )"
+          },
           "xunit": {
             "target": "Package",
             "version": "[2.9.2, )"
@@ -35974,20 +36173,12 @@
         "warn": true,
         "downloadDependencies": [
           {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
-          },
-          {
             "name": "Microsoft.MacCatalyst.Ref.net8.0_18.0",
             "version": "[18.0.8316, 18.0.8316]"
           },
           {
             "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-x64.net8.0_18.0",
             "version": "[18.0.8316, 18.0.8316]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[8.0.11, 8.0.11]"
           }
         ],
         "frameworkReferences": {

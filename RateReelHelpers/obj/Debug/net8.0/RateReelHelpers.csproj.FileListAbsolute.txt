@@ -1,0 +1,12 @@
+/Users/vinn/Desktop/RateReel/RateReelHelpers/bin/Debug/net8.0/RateReelHelpers.deps.json
+/Users/vinn/Desktop/RateReel/RateReelHelpers/bin/Debug/net8.0/RateReelHelpers.dll
+/Users/vinn/Desktop/RateReel/RateReelHelpers/bin/Debug/net8.0/RateReelHelpers.pdb
+/Users/vinn/Desktop/RateReel/RateReelHelpers/obj/Debug/net8.0/RateReelHelpers.GeneratedMSBuildEditorConfig.editorconfig
+/Users/vinn/Desktop/RateReel/RateReelHelpers/obj/Debug/net8.0/RateReelHelpers.AssemblyInfoInputs.cache
+/Users/vinn/Desktop/RateReel/RateReelHelpers/obj/Debug/net8.0/RateReelHelpers.AssemblyInfo.cs
+/Users/vinn/Desktop/RateReel/RateReelHelpers/obj/Debug/net8.0/RateReelHelpers.csproj.CoreCompileInputs.cache
+/Users/vinn/Desktop/RateReel/RateReelHelpers/obj/Debug/net8.0/RateReelHelpers.sourcelink.json
+/Users/vinn/Desktop/RateReel/RateReelHelpers/obj/Debug/net8.0/RateReelHelpers.dll
+/Users/vinn/Desktop/RateReel/RateReelHelpers/obj/Debug/net8.0/refint/RateReelHelpers.dll
+/Users/vinn/Desktop/RateReel/RateReelHelpers/obj/Debug/net8.0/RateReelHelpers.pdb
+/Users/vinn/Desktop/RateReel/RateReelHelpers/obj/Debug/net8.0/ref/RateReelHelpers.dll

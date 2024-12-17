@@ -62,6 +62,7 @@
 /Users/vinn/Desktop/RateReel/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/MongoDB.Driver.dll
 /Users/vinn/Desktop/RateReel/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/Moq.dll
 /Users/vinn/Desktop/RateReel/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/Newtonsoft.Json.dll
+/Users/vinn/Desktop/RateReel/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/RateReelHelpers.dll
 /Users/vinn/Desktop/RateReel/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/SharpCompress.dll
 /Users/vinn/Desktop/RateReel/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/Snappier.dll
 /Users/vinn/Desktop/RateReel/bin/Debug/net8.0-ios/iossimulator-x64/publish/../RateReel.app/System.Diagnostics.DiagnosticSource.dll

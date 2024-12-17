@@ -23,9 +23,9 @@
           "net8.0-maccatalyst"
         ],
         "sources": {
+          "/Users/vinn/.nuget/NuGet/RateReelHelpers/output": {},
           "/usr/local/share/dotnet/library-packs": {},
-          "https://api.nuget.org/v3/index.json": {},
-          "https://www.nuget.org/packages/RateReelPackage/": {}
+          "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net8.0-android34.0": {
@@ -99,6 +99,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "RateReelHelpers": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.9.2, )"
@@ -135,14 +139,6 @@
             {
               "name": "Microsoft.Android.Runtime.34.android-x86",
               "version": "[34.0.145, 34.0.145]"
-            },
-            {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
             }
           ],
           "frameworkReferences": {
@@ -200,6 +196,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "RateReelHelpers": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.9.2, )"
@@ -218,20 +218,12 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
               "name": "Microsoft.iOS.Ref.net8.0_18.0",
               "version": "[18.0.8316, 18.0.8316]"
             },
             {
               "name": "Microsoft.iOS.Runtime.iossimulator-x64.net8.0_18.0",
               "version": "[18.0.8316, 18.0.8316]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
             }
           ],
           "frameworkReferences": {
@@ -289,6 +281,10 @@
               "target": "Package",
               "version": "[13.0.3, )"
             },
+            "RateReelHelpers": {
+              "target": "Package",
+              "version": "[1.0.0, )"
+            },
             "xunit": {
               "target": "Package",
               "version": "[2.9.2, )"
@@ -308,20 +304,12 @@
           "warn": true,
           "downloadDependencies": [
             {
-              "name": "Microsoft.AspNetCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
-            },
-            {
               "name": "Microsoft.MacCatalyst.Ref.net8.0_18.0",
               "version": "[18.0.8316, 18.0.8316]"
             },
             {
               "name": "Microsoft.MacCatalyst.Runtime.maccatalyst-x64.net8.0_18.0",
               "version": "[18.0.8316, 18.0.8316]"
-            },
-            {
-              "name": "Microsoft.NETCore.App.Ref",
-              "version": "[8.0.11, 8.0.11]"
             }
           ],
           "frameworkReferences": {
